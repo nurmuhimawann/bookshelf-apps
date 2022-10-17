@@ -1,0 +1,410 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* start global css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+}
+
+input,
+button {
+    font-size: 16px;
+}
+
+header {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* end global css */
+
+
+/* start search section */
+.search_section {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+.search_section>form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+.search_section>form>.search {
+    width: 70%;
+    display: flex;
+    height: 50px;
+    border: 1px solid rgb(223, 220, 220);
+    border-radius: 15px;
+}
+
+.search_section>form>.search:focus-within {
+    outline: none;
+    border-color: rgba(68, 76, 247, 0.3);
+    box-shadow: 0 0 15px rgba(68, 76, 247, 0.3);
+    transition: .6s;
+}
+
+.search_section>form>.search>input {
+    width: 85%;
+    border: none;
+    outline: none;
+    border-radius: 15px 0 0 15px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.search_section>form>.search>button {
+    width: 15%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 0 15px 15px 0;
+}
+
+.search_section>form>.add {
+    width: 25%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search_section>form>.add>button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid rgba(68, 76, 247, 0.6);
+    color: rgb(68, 76, 247);
+}
+
+.search_section>form>.add>button>i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.search_section>form>.add:hover>button {
+    color: white;
+    background-color: rgba(68, 76, 247, 0.8);
+    transition: all .5s;
+}
+
+/* end search section */
+
+
+/* start overlay add book */
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 2px solid rgb(223, 220, 220);
+    border-radius: 20px;
+    background-color: white;
+}
+
+#formBook {
+    display: none;
+}
+
+.input_section>.title-input {
+    position: relative;
+}
+
+.input_section>.title-input>.close {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    color: rgba(68, 76, 247, 0.8);
+    cursor: pointer;
+}
+
+.input_section>.title-input>.close:hover {
+    color: #0b5ed7;
+    transition: .5s;
+}
+
+.input_section>.title-input>h2 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 10px auto 15px;
+}
+
+.input_section>form {
+    margin-bottom: 15px;
+}
+
+.input_section>form>.input>input {
+    display: block;
+    width: 95%;
+    height: 60px;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(223, 220, 220);
+    border-radius: 15px;
+    padding: 0 20px;
+}
+
+.input_section>form>.input>input:focus {
+    outline: none;
+    border-color: rgba(68, 76, 247, 0.3);
+    box-shadow: 0 0 5px rgba(68, 76, 247, 0.3);
+    transition: .6s;
+}
+
+.input_section>form>.input_inline {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.input_section>form>.input_inline>input {
+    margin-left: 5px;
+}
+
+.input_section>form>.input_inline>label {
+    color: #444cf7;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input_section>form>button {
+    background-color: white;
+    color: white;
+    border: 1.5px solid rgba(68, 76, 247, 0.6);
+    color: rgb(68, 76, 247);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 95%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.input_section>form>button:hover {
+    color: white;
+    background-color: rgba(68, 76, 247, 0.8);
+    transition: all .5s;
+}
+
+/* end overlay add book */
+
+
+/* start show bookshelf */
+section>.showBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 2px solid rgb(223, 220, 220);
+    border-radius: 20px;
+    background-color: white;
+    padding: 16px;
+}
+
+.book_shelf>h2 {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.book_shelf>.book_list {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book_shelf>.book_list>.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 40px 50px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #8aabca;
+}
+
+.book_shelf>.book_list>.card>.card-img {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+}
+
+.book_shelf>.book_list>.card>.card-img>img {
+    max-height: 99%;
+    max-width: 99%;
+}
+
+.book_shelf>.book_list>.card>.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 15px 15px;
+    width: 100%;
+}
+
+.book_shelf>.book_list>.card>.card-body>.content>h3,
+p {
+    margin-bottom: 3px;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 15px;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.done {
+    border: 1px solid #19b82b;
+    border-radius: 10px;
+    color: #19b82b;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.done:hover {
+    background-color: #19b82b;
+    color: white;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.edit {
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+    color: #0d6efd;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.edit:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.undo {
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    color: #ffc107;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.undo:hover {
+    background-color: #ffc107;
+    color: white;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.delete {
+    border: 1px solid #db2828;
+    border-radius: 10px;
+    color: #db2828;
+}
+
+.book_shelf>.book_list>.card>.card-body>.action>.delete:hover {
+    background-color: #db2828;
+    color: white;
+}
+
+/* end show bookshelf */
+
+
+/* start footer */
+.footer {
+    display: flex;
+    width: 960px;
+    font-family: monospace;
+    margin: 50px auto 0;
+    line-height: 4;
+    border-top: 1px solid white;
+}
+
+.footer>ul {
+    display: flex;
+    grid-gap: 40px;
+    justify-items: center;
+    margin: auto;
+    list-style: none;
+}
+
+.footer>ul>li>a {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.footer>ul>li>a:hover {
+    box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 1);
+}
+
+.footer>ul>li:hover~li p {
+    animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+}
+
+/* end footer */

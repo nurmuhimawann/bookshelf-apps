@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- title -->
+    <title>Bookshelf Apps - Nur Muhammad Himawan</title>
+
+    <!-- title icon -->
+    <link rel="icon" href="assets/img/title-icon.png" type="image/icon type">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Icon from bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="head_bar">
+        <h1 class="head_bar__title">Bookshelf Apps</h1>
+    </header>
+    <!-- end header -->
+
+    <!-- start main -->
+    <main>
+        <!-- start search -->
+        <section class="search_section">
+            <form id="searchBook">
+                <div class="search" id="sc">
+                    <input id="searchBookTitle" type="text" placeholder="Search" />
+                    <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="add">
+                    <button id="searchSubmit" type="submit"><i class="bi bi-plus-lg"></i><span>Add Book</span></button>
+                </div>
+            </form>
+        </section>
+        <!-- end search -->
+
+        <!-- start form add book -->
+        <section class="input_section" id="formBook">
+            <div class="title-input">
+                <h2>Add New Book</h2>
+                <span class="close"><i class="bi bi-x-circle-fill"></i></span>
+            </div>
+            <form id="inputBook">
+                <div class="input">
+                    <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+                </div>
+                <div class="input">
+                    <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+                </div>
+                <div class="input">
+                    <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+                </div>
+                <div class="input">
+                    <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+                </div>
+                <div class="input_inline">
+                    <input id="inputBookIsComplete" type="checkbox" />
+                    <label for="inputBookIsComplete">Finished Reading</label>
+                </div>
+                <button id="bookSubmit" type="submit">Add Book</button>
+            </form>
+        </section>
+        <!-- end form add book -->
+
+        <!-- start show book -->
+        <section class="showBook">
+            <!-- start unfinished book -->
+            <section class="book_shelf">
+                <h2>Unfinished</h2>
+                <div id="incompleteBookshelfList" class="book_list">
+                    <!-- <article class="card">
+                        <div class="card-img">
+                            <img id="bookImage" src="assets/img/1.png" alt="Book Image" class="book-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="content">
+                                <h3>Salma Izzatul Islam</h3>
+                                <p>Nur Muhammad Himawan</p>
+                                <p>2022</p>
+                                <h4>Historical Fiction</h4>
+                            </div>
+                            <div class="action">
+                                <button type="button" class="done"><i class="bi bi-check-circle"></i></button>
+                                <button type="button" class="edit"><i class="bi bi-pencil-square"></i></button>
+                                <button type="button" class="delete"><i class="bi bi-trash-fill"></i></button>
+                            </div>
+                        </div>
+                    </article> -->
+                </div>
+            </section>
+            <!-- end unfinished book -->
+
+            <!-- start finished book -->
+            <section class="book_shelf">
+                <h2>Finished to Read</h2>
+                <div id="completeBookshelfList" class="book_list">
+                    <!-- <article class="card">
+                        <div class="card-img">
+                            <img id="bookImage" src="assets/img/2.png" alt="Book Image" class="book-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="content">
+                                <h3>Salma Izzatul Islam</h3>
+                                <p>Nur Muhammad Himawan</p>
+                                <p>2022</p>
+                                <h4>Historical Fiction</h4>
+                            </div>
+                            <div class="action">
+                                <button type="button" class="undo"><i class="bi bi-arrow-clockwise"></i></button>
+                                <button type="button" class="edit"><i class="bi bi-pencil-square"></i></button>
+                                <button type="button" class="delete"><i class="bi bi-trash-fill"></i></button>
+                            </div>
+                        </div>
+                    </article> -->
+                </div>
+            </section>
+            <!-- end finished book -->
+        </section>
+        <!-- end show book -->
+    </main>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer>
+        <div class="footer">
+            <ul>
+                <li style="order: 2"><a href="https://github.com/nurmuhimawann">Github</a></li>
+                <li style="order: 3"><a href="https://www.linkedin.com/in/nurmuhimawann/">LinkedIn</a></li>
+                <li style="order: 4"><a href="https://www.youtube.com/c/justinbieber/">Youtube</a></li>
+                <li style="order: 1">
+                    <p>👋</p>
+                </li>
+                <li style="order: 5">
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- end footer -->
+</body>
+
+</html>
