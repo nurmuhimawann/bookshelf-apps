@@ -31,42 +31,44 @@
         <!-- start search -->
         <section class="search_section">
             <form id="searchBook">
-                <div class="search" id="sc">
+                <div class="search">
                     <input id="searchBookTitle" type="text" placeholder="Search" />
                     <button id="searchSubmit" type="submit"><i class="bi bi-search"></i></button>
                 </div>
                 <div class="add">
-                    <button id="searchSubmit" type="submit"><i class="bi bi-plus-lg"></i><span>Add Book</span></button>
+                    <button id="addBook"><i class="bi bi-plus-lg"></i><span>Add Book</span></button>
                 </div>
             </form>
         </section>
         <!-- end search -->
 
         <!-- start form add book -->
-        <section class="input_section" id="formBook">
-            <div class="title-input">
-                <h2>Add New Book</h2>
-                <span class="close"><i class="bi bi-x-circle-fill"></i></span>
+        <section id="formBook">
+            <div class="input_section">
+                <div class="title-input">
+                    <h2>Add New Book</h2>
+                    <span id="close"><i class="bi bi-x-circle-fill"></i></span>
+                </div>
+                <form id="inputBook">
+                    <div class="input">
+                        <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+                    </div>
+                    <div class="input">
+                        <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+                    </div>
+                    <div class="input_inline">
+                        <input id="inputBookIsComplete" type="checkbox" />
+                        <label for="inputBookIsComplete">Finished Reading</label>
+                    </div>
+                    <button id="bookSubmit" type="submit">Add Book</button>
+                </form>
             </div>
-            <form id="inputBook">
-                <div class="input">
-                    <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
-                </div>
-                <div class="input">
-                    <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
-                </div>
-                <div class="input">
-                    <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
-                </div>
-                <div class="input">
-                    <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
-                </div>
-                <div class="input_inline">
-                    <input id="inputBookIsComplete" type="checkbox" />
-                    <label for="inputBookIsComplete">Finished Reading</label>
-                </div>
-                <button id="bookSubmit" type="submit">Add Book</button>
-            </form>
         </section>
         <!-- end form add book -->
 
@@ -145,6 +147,8 @@
         </div>
     </footer>
     <!-- end footer -->
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
