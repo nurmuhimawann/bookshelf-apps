@@ -121,6 +121,56 @@ main {
     transition: all .5s;
 }
 
+@media only screen and (max-width:1115px) {
+    .search_section {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .search_section {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .search_section>form>.search {
+        width: 65%;
+    }
+
+    .search_section>form>.add {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width:560px) {
+    .search_section>form {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .search_section>form>.search {
+        width: 100%;
+    }
+
+    .search_section>form>.search>input {
+        padding-left: 70px;
+    }
+
+    .search_section>form>.add {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .search_section>form>.add>button>i {
+        font-size: 16px;
+    }
+
+    .search_section>form>.add>button>span {
+        padding-right: 30px;
+    }
+}
+
 /* end search section */
 
 
@@ -234,6 +284,36 @@ main {
     color: white;
     background-color: rgba(68, 76, 247, 0.8);
     transition: all .5s;
+}
+
+@media only screen and (max-width:1115px) {
+    .input_section {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width:830px) {
+    .input_section {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .input_section {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .input_section>.title-input>h2 {
+        margin: 30px auto 15px;
+    }
+
+    .input_section>.title-input>#close {
+        position: absolute;
+        top: -15px;
+        right: 100px;
+    }
 }
 
 /* end overlay add book */
@@ -366,6 +446,40 @@ p {
     color: white;
 }
 
+@media only screen and (max-width:1115px) {
+
+    /* styles for browsers max 115px; */
+    .showBook {
+        width: 80%;
+        margin: auto;
+    }
+
+    .book_shelf>.book_list>.card {
+        margin: 0px 20px 50px;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .showBook {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book_shelf {
+        width: 100%;
+    }
+
+    .book_shelf>.book_list {
+        justify-content: center;
+    }
+
+    .book_shelf>.book_list>.card {
+        margin: 0px 40px 50px;
+    }
+}
+
 /* end show bookshelf */
 
 
@@ -415,6 +529,18 @@ p {
 
     75% {
         transform: rotate(-15deg);
+    }
+}
+
+@media only screen and (max-width:1115px) {
+    .footer {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .footer {
+        width: 80%;
     }
 }
 
