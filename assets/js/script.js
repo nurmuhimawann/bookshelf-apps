@@ -9,6 +9,7 @@ showOn.addEventListener('click', function () {
 
 showOff.addEventListener('click', function () {
     overlay.style.display = 'none';
+    selectedEditBook.length = 0;
 });
 
 // Web Storage
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         addBook();
         clear();
+        selectedEditBook.splice(0, selectedEditBook.length);
     });
 
     showOn.addEventListener('click', function (event) {
@@ -300,12 +302,15 @@ function addFinished(bookId) {
     saveData();
 }
 
+const selectedEditBook = [];
+
 // function to edit book
 function editBook(bookId) {
     const bookTarget = findBook(bookId);
 
     if (bookTarget == null) return;
 
+    selectedEditBook.push(bookTarget);
     overlay.style.display = 'flex';
     document.getElementById('inputBookTitle').value = bookTarget.title;
     document.getElementById('inputBookAuthor').value = bookTarget.author;
@@ -315,6 +320,8 @@ function editBook(bookId) {
 
     const editNameButton = document.getElementById('bookSubmit');
     editNameButton.innerText = 'Edit Book';
+
+    saveEditBook();
 }
 
 function saveEditBook() {
@@ -324,13 +331,16 @@ function saveEditBook() {
     const category = document.getElementById('inputBookCategory').value;
     const isCompleted = document.getElementById('inputBookIsComplete').checked;
 
-    const bookIndex = findBookIndex(parseInt(bookId));
+    const getBookId = selectedEditBook.id;
+    const bookIndex = findBookIndex(parseInt(getBookId));
 
-    books[bookIndex].title = judul;
-    books[bookIndex].author = penulis;
-    books[bookIndex].year = tahun;
+    books[bookIndex].title = title;
+    books[bookIndex].author = author;
+    books[bookIndex].year = year;
+    books[bookIndex].category = category;
+    books[bookIndex].isCompleted = isCompleted;
 
-    refreshDataFromBooks();
+    document.dispatchEvent(new Event(RENDER_EVENT));
     overlay.style.display = 'flex';
 }
 
