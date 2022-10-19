@@ -28,7 +28,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br><br>
 
 <div align="center">
 <figure>
@@ -37,7 +37,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br>
 
 <div align="center">
 <figure>
@@ -46,7 +46,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br>
 
 <div align="center">
 <figure>
@@ -55,7 +55,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br>
 
 <div align="center">
 <figure>
@@ -64,7 +64,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br>
 
 <div align="center">
 <figure>
@@ -73,7 +73,7 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
 </figure>
 </div>
 
-
+<br>
 
 <div align="center">
 <figure>
@@ -81,7 +81,6 @@ Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicod
     <figcaption align="center"><b>Search Book</b></figcaption>
 </figure>
 </div>
-
 
 
 ## Resource
