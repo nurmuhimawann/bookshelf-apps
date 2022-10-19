@@ -5,6 +5,11 @@ const overlay = document.getElementById('formBook');
 
 showOn.addEventListener('click', function () {
     overlay.style.display = 'flex';
+    const h2 = document.querySelector('.input_section .title-input h2');
+    h2.innerText = 'Add New Book'
+
+    const editNameButton = document.getElementById('bookSubmit');
+    editNameButton.innerText = 'Add Book';
 });
 
 showOff.addEventListener('click', function () {
@@ -313,6 +318,7 @@ var isEdit = false;
 
 // function to edit book
 function editBook(bookId) {
+    isEdit = true;
     const bookTarget = findBook(bookId);
 
     if (bookTarget == null) return;
@@ -327,39 +333,48 @@ function editBook(bookId) {
 
     const h2 = document.querySelector('.input_section .title-input h2');
     h2.innerText = 'Form Edit'
-    
+
     const editNameButton = document.getElementById('bookSubmit');
     editNameButton.innerText = 'Edit Book';
 
-    saveEditBook();
-    saveData();
+    //saveEditBook();
+    //saveData();
 }
 
 function saveEditBook() {
-    isEdit = true;
-    const getBookId = selectedEditBook.id;
+    isEdit = false;
+    const getBookId = selectedEditBook[0].id;
     const title = document.getElementById('inputBookTitle').value;
     const author = document.getElementById('inputBookAuthor').value;
     const year = document.getElementById('inputBookYear').value;
     const category = document.getElementById('inputBookCategory').value;
     const isCompleted = document.getElementById('inputBookIsComplete').checked;
 
-    for (i in selectedEditBook[0]) {
-        selectedEditBook[0].id = getBookId;
-        selectedEditBook[0].title = title;
-        selectedEditBook[0].author = author;
-        selectedEditBook[0].year = year;
-        selectedEditBook[0].category = category;
-        selectedEditBook[0].isCompleted = isCompleted;
 
-        return selectedEditBook[0]
-    }
 
-    books.push(selectedEditBook[0]);
+    const bookTarget = findBook(getBookId);
 
+    if (bookTarget == null) return;
+
+    //for (i in selectedEditBook[0]) {
+    bookTarget.id = getBookId;
+    bookTarget.title = title;
+    bookTarget.author = author;
+    bookTarget.year = year;
+    bookTarget.category = category;
+    bookTarget.isCompleted = isCompleted;
+
+    //return selectedEditBook[0]
+    //}
+
+    //books.push(selectedEditBook[0]);
+
+    console.log("runnn")
+    selectedEditBook.splice(0, selectedEditBook.length);
     document.dispatchEvent(new Event(RENDER_EVENT));
-    
     saveData();
+
+    //isEdit = false;
 }
 
 // function to delete book
