@@ -370,8 +370,13 @@ function deleteBook(bookId) {
 
     if (bookTarget == -1) return;
 
-    books.splice(bookTarget, 1);
-    document.dispatchEvent(new Event(RENDER_EVENT));
+    const confirmDelete = confirm('Serius nih, mau dihapus?');
+    if (confirmDelete === true) {
+        books.splice(bookTarget, 1);
+        document.dispatchEvent(new Event(RENDER_EVENT));
+    } else {
+        return;
+    }
 
     saveData();
 }
