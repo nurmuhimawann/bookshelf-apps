@@ -1,3 +1,6 @@
+# Submission Belajar Membuat Front-End Web untuk Pemula
+🌀 #9. "Belajar Membuat Front-End Web untuk Pemula"
+
 <p align='center'>
   <a href="https://www.w3.org/standards/webdesign/htmlcss">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/></a>&nbsp;&nbsp;
@@ -16,8 +19,6 @@
 | Progam        | Studi Independen Batch 3 - Kampus Merdeka |
 
 </div>
-
-# MLFE - Belajar Membuat Front-End Web untuk Pemula
 
 Proyek submission untuk kelas **Belajar Membuat Front-End Web untuk Pemula Dicoding**.
 
